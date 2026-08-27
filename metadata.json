@@ -1,0 +1,6 @@
+{
+  "name": "Perspective.ai",
+  "description": "AI-powered architectural visualization SaaS for converting 2D floor plans into photorealistic top-down 3D renders and interactive 3D models.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

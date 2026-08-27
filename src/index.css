@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+:root {
+  --color-canvas: #ffffff;
+  --color-canvas-soft: #f6f9fc;
+  --color-canvas-cream: #f5e9d4;
+  --color-hairline: #e3e8ee;
+  --color-hairline-input: #a8c3de;
+  --color-primary: #533afd;
+  --color-primary-deep: #4434d4;
+  --color-primary-press: #2e2b8c;
+  --color-primary-soft: #665efd;
+  --color-primary-subdued: #b9b9f9;
+  --color-brand-dark: #1c1e54;
+  --color-ink: #0d253d;
+  --color-ink-secondary: #273951;
+  --color-ink-mute: #64748d;
+  --color-ink-mute-2: #61718a;
+  --color-ruby: #ea2261;
+  --color-magenta: #f96bee;
+  --color-lemon: #9b6829;
+}
+
+@layer base {
+  html, body {
+    background-color: #ffffff;
+    color: #0d253d;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 300;
+    font-feature-settings: "ss01" on;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #0d253d;
+    font-weight: 300;
+  }
+}
+
+/* Tabular numbers for financial/metric data */
+.tnum, .tabular-nums {
+  font-feature-settings: "tnum" on, "ss01" on;
+  letter-spacing: -0.42px;
+}
+
+/* Stripe Level 1 & Level 2 Shadows */
+.shadow-stripe-1 {
+  box-shadow: 0 1px 3px rgba(0, 55, 112, 0.08);
+}
+
+.shadow-stripe-2 {
+  box-shadow: 0 8px 24px rgba(0, 55, 112, 0.08), 0 2px 6px rgba(0, 55, 112, 0.04);
+}
+
+.shadow-stripe-dark {
+  box-shadow: 0 20px 40px -15px rgba(13, 37, 61, 0.3), 0 0 1px 1px rgba(13, 37, 61, 0.05);
+}
+
+/* Stripe Gradient Mesh Atmospheric Background */
+.stripe-mesh-bg {
+  background-color: #ffffff;
+  background-image: 
+    radial-gradient(at 15% 15%, rgba(249, 156, 103, 0.45) 0px, transparent 50%),
+    radial-gradient(at 50% 5%, rgba(245, 233, 212, 0.9) 0px, transparent 60%),
+    radial-gradient(at 85% 15%, rgba(190, 155, 249, 0.45) 0px, transparent 55%),
+    radial-gradient(at 65% 45%, rgba(83, 58, 253, 0.18) 0px, transparent 50%),
+    radial-gradient(at 25% 40%, rgba(234, 34, 97, 0.16) 0px, transparent 45%),
+    radial-gradient(at 95% 40%, rgba(249, 107, 238, 0.22) 0px, transparent 50%);
+  background-size: 100% 640px;
+  background-repeat: no-repeat;
+}
+
+.stripe-mesh-dense {
+  background: linear-gradient(135deg, 
+    #fff4e6 0%, 
+    #ffd4bc 22%, 
+    #e9d8fd 48%, 
+    #b9b9f9 72%, 
+    #ffd6e7 100%
+  );
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 12s linear infinite;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f6f9fc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
